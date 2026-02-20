@@ -6,3 +6,6 @@ __pycache__/
 *.json
 .DS_Store
 EOFinfrastructure/.terraform/
+infrastructure/terraform.tfstate
+infrastructure/terraform.tfstate.backup
+infrastructure/terraform.tfvars
