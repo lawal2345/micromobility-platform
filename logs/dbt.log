@@ -1,0 +1,105 @@
+[0m13:23:26.878341 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112314980>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1141f3750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1141f3890>]}
+
+
+============================== 13:23:26.881262 | 4817a3c8-09fb-48c2-a18b-279f8e0622cd ==============================
+[0m13:23:26.881262 [info ] [MainThread]: Running with dbt=1.11.6
+[0m13:23:26.881583 [debug] [MainThread]: running dbt with arguments {'log_path': 'logs', 'use_colors': 'True', 'no_print': 'None', 'empty': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_format': 'default', 'use_experimental_parser': 'False', 'quiet': 'False', 'fail_fast': 'False', 'invocation_command': 'dbt init dbt', 'printer_width': '80', 'profiles_dir': '/Users/mac/.dbt', 'introspect': 'True', 'debug': 'False', 'send_anonymous_usage_stats': 'True', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'static_parser': 'True', 'target_path': 'None', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None'}
+[0m13:24:18.162639 [debug] [MainThread]: Starter project path: /Users/mac/Desktop/lawalenv/micro-mobility/micromobility-platform/venv/lib/python3.13/site-packages/dbt/include/starter_project
+[0m13:24:18.176994 [info ] [MainThread]: 
+Your new dbt project "micromobility_dbt" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m13:24:18.177798 [info ] [MainThread]: Setting up your profile.
+[0m13:25:16.091857 [error] [MainThread]: Encountered an error:
+
+[0m13:25:16.100584 [error] [MainThread]: Traceback (most recent call last):
+  File "/Users/mac/Desktop/lawalenv/micro-mobility/micromobility-platform/venv/lib/python3.13/site-packages/dbt/cli/requires.py", line 182, in wrapper
+    result, success = func(*args, **kwargs)
+                      ~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/mac/Desktop/lawalenv/micro-mobility/micromobility-platform/venv/lib/python3.13/site-packages/dbt/cli/requires.py", line 128, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/mac/Desktop/lawalenv/micro-mobility/micromobility-platform/venv/lib/python3.13/site-packages/dbt/cli/main.py", line 483, in init
+    results = task.run()
+  File "/Users/mac/Desktop/lawalenv/micro-mobility/micromobility-platform/venv/lib/python3.13/site-packages/dbt/task/init.py", line 346, in run
+    self.setup_profile(profile_name)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/mac/Desktop/lawalenv/micro-mobility/micromobility-platform/venv/lib/python3.13/site-packages/dbt/task/init.py", line 262, in setup_profile
+    self.create_profile_from_target(adapter, profile_name=profile_name)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/Desktop/lawalenv/micro-mobility/micromobility-platform/venv/lib/python3.13/site-packages/dbt/task/init.py", line 179, in create_profile_from_target
+    self.create_profile_from_profile_template(profile_template, profile_name)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/Desktop/lawalenv/micro-mobility/micromobility-platform/venv/lib/python3.13/site-packages/dbt/task/init.py", line 163, in create_profile_from_profile_template
+    target = self.generate_target_from_input(prompts, initial_target)
+  File "/Users/mac/Desktop/lawalenv/micro-mobility/micromobility-platform/venv/lib/python3.13/site-packages/dbt/task/init.py", line 129, in generate_target_from_input
+    target[key] = click.prompt(
+                  ~~~~~~~~~~~~^
+        text, default=default, hide_input=hide_input, type=type
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/mac/Desktop/lawalenv/micro-mobility/micromobility-platform/venv/lib/python3.13/site-packages/click/termui.py", line 171, in prompt
+    value = prompt_func(prompt)
+  File "/Users/mac/Desktop/lawalenv/micro-mobility/micromobility-platform/venv/lib/python3.13/site-packages/click/termui.py", line 154, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m13:25:16.121950 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": false, "command_wall_clock_time": 109.29044, "process_in_blocks": "0", "process_kernel_time": 0.997818, "process_mem_max_rss": "377421824", "process_out_blocks": "0", "process_user_time": 3.169179}
+[0m13:25:16.122944 [debug] [MainThread]: Command `dbt init` failed at 13:25:16.122808 after 109.29 seconds
+[0m13:25:16.123393 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x146f790f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1472bb890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1472d0e20>]}
+[0m13:25:16.123860 [debug] [MainThread]: Flushing usage events
+[0m13:25:16.676775 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:25:26.395752 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1044f8980>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10544b750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10544b890>]}
+
+
+============================== 13:25:26.398647 | 600816d5-332b-4a8e-a8fc-687849335f10 ==============================
+[0m13:25:26.398647 [info ] [MainThread]: Running with dbt=1.11.6
+[0m13:25:26.398988 [debug] [MainThread]: running dbt with arguments {'invocation_command': 'dbt init micromobility_dbt', 'version_check': 'True', 'printer_width': '80', 'use_experimental_parser': 'False', 'log_format': 'default', 'profiles_dir': '/Users/mac/.dbt', 'static_parser': 'True', 'quiet': 'False', 'cache_selected_only': 'False', 'log_path': 'logs', 'introspect': 'True', 'debug': 'False', 'fail_fast': 'False', 'send_anonymous_usage_stats': 'True', 'log_cache_events': 'False', 'target_path': 'None', 'empty': 'None', 'use_colors': 'True', 'warn_error': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'no_print': 'None', 'write_json': 'True', 'indirect_selection': 'eager', 'partial_parse': 'True'}
+[0m13:25:26.407475 [info ] [MainThread]: A project called micromobility_dbt already exists here.
+[0m13:25:26.409460 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 0.051367167, "process_in_blocks": "0", "process_kernel_time": 0.105214, "process_mem_max_rss": "106119168", "process_out_blocks": "0", "process_user_time": 0.712944}
+[0m13:25:26.409891 [debug] [MainThread]: Command `dbt init` succeeded at 13:25:26.409830 after 0.05 seconds
+[0m13:25:26.410086 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10545a520>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105505eb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1054a88d0>]}
+[0m13:25:26.410287 [debug] [MainThread]: Flushing usage events
+[0m13:25:26.875209 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:27:55.779384 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103b54980>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1101f3750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1101f3890>]}
+
+
+============================== 13:27:55.782514 | aa6e405f-fa18-407d-8de4-134bf726143e ==============================
+[0m13:27:55.782514 [info ] [MainThread]: Running with dbt=1.11.6
+[0m13:27:55.782857 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'profiles_dir': '/Users/mac/.dbt', 'indirect_selection': 'eager', 'static_parser': 'True', 'write_json': 'True', 'introspect': 'True', 'cache_selected_only': 'False', 'use_colors': 'True', 'send_anonymous_usage_stats': 'True', 'use_experimental_parser': 'False', 'target_path': 'None', 'log_format': 'default', 'invocation_command': 'dbt init micromobility_dbt', 'no_print': 'None', 'warn_error': 'None', 'log_path': 'logs', 'empty': 'None', 'debug': 'False', 'version_check': 'True', 'fail_fast': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'log_cache_events': 'False', 'quiet': 'False'}
+[0m13:27:55.791684 [debug] [MainThread]: Starter project path: /Users/mac/Desktop/lawalenv/micro-mobility/micromobility-platform/venv/lib/python3.13/site-packages/dbt/include/starter_project
+[0m13:27:55.795687 [info ] [MainThread]: 
+Your new dbt project "micromobility_dbt" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m13:27:55.795885 [info ] [MainThread]: Setting up your profile.
+[0m13:49:29.117356 [info ] [MainThread]: Profile micromobility_dbt written to /Users/mac/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m13:49:29.145913 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 1293.4263, "process_in_blocks": "0", "process_kernel_time": 0.998088, "process_mem_max_rss": "375898112", "process_out_blocks": "0", "process_user_time": 3.147587}
+[0m13:49:29.149649 [debug] [MainThread]: Command `dbt init` succeeded at 13:49:29.149410 after 1293.43 seconds
+[0m13:49:29.150531 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x14ba65350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x14af7b650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x14afece20>]}
+[0m13:49:29.151238 [debug] [MainThread]: Flushing usage events
+[0m13:49:29.598137 [debug] [MainThread]: An error was encountered while trying to flush usage events

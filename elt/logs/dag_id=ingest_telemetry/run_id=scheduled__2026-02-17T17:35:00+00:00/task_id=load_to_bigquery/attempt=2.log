@@ -1,0 +1,86 @@
+[2026-02-17T17:42:10.434+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ingest_telemetry.load_to_bigquery scheduled__2026-02-17T17:35:00+00:00 [queued]>
+[2026-02-17T17:42:10.438+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ingest_telemetry.load_to_bigquery scheduled__2026-02-17T17:35:00+00:00 [queued]>
+[2026-02-17T17:42:10.438+0000] {taskinstance.py:2170} INFO - Starting attempt 2 of 2
+[2026-02-17T17:42:10.445+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): load_to_bigquery> on 2026-02-17 17:35:00+00:00
+[2026-02-17T17:42:10.448+0000] {standard_task_runner.py:60} INFO - Started process 670 to run task
+[2026-02-17T17:42:10.450+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'ingest_telemetry', 'load_to_bigquery', 'scheduled__2026-02-17T17:35:00+00:00', '--job-id', '25', '--raw', '--subdir', 'DAGS_FOLDER/ingest_telemetry.py', '--cfg-path', '/tmp/tmp22qc0af7']
+[2026-02-17T17:42:10.451+0000] {standard_task_runner.py:88} INFO - Job 25: Subtask load_to_bigquery
+[2026-02-17T17:42:10.475+0000] {task_command.py:423} INFO - Running <TaskInstance: ingest_telemetry.load_to_bigquery scheduled__2026-02-17T17:35:00+00:00 [running]> on host 173280efb2df
+[2026-02-17T17:42:10.509+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='lawal' AIRFLOW_CTX_DAG_ID='ingest_telemetry' AIRFLOW_CTX_TASK_ID='load_to_bigquery' AIRFLOW_CTX_EXECUTION_DATE='2026-02-17T17:35:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-02-17T17:35:00+00:00'
+[2026-02-17T17:42:14.732+0000] {ingest_telemetry.py:86} INFO - Loaded telemetry/raw_20260214_131534.json → 4 rows
+[2026-02-17T17:42:17.501+0000] {ingest_telemetry.py:86} INFO - Loaded telemetry/raw_20260214_131540.json → 8 rows
+[2026-02-17T17:42:21.364+0000] {ingest_telemetry.py:86} INFO - Loaded telemetry/raw_20260214_131545.json → 9 rows
+[2026-02-17T17:42:23.228+0000] {ingest_telemetry.py:86} INFO - Loaded telemetry/raw_20260214_131550.json → 12 rows
+[2026-02-17T17:42:26.451+0000] {ingest_telemetry.py:86} INFO - Loaded telemetry/raw_20260214_131555.json → 15 rows
+[2026-02-17T17:42:28.727+0000] {ingest_telemetry.py:86} INFO - Loaded telemetry/raw_20260214_131600.json → 17 rows
+[2026-02-17T17:42:31.217+0000] {ingest_telemetry.py:86} INFO - Loaded telemetry/raw_20260214_131606.json → 18 rows
+[2026-02-17T17:42:35.443+0000] {ingest_telemetry.py:86} INFO - Loaded telemetry/raw_20260214_131611.json → 19 rows
+[2026-02-17T17:42:39.247+0000] {ingest_telemetry.py:86} INFO - Loaded telemetry/raw_20260214_131616.json → 19 rows
+[2026-02-17T17:42:41.565+0000] {ingest_telemetry.py:86} INFO - Loaded telemetry/raw_20260214_131621.json → 19 rows
+[2026-02-17T17:42:44.708+0000] {ingest_telemetry.py:86} INFO - Loaded telemetry/raw_20260214_131626.json → 19 rows
+[2026-02-17T17:42:46.768+0000] {ingest_telemetry.py:86} INFO - Loaded telemetry/raw_20260214_131631.json → 20 rows
+[2026-02-17T17:42:49.204+0000] {ingest_telemetry.py:86} INFO - Loaded telemetry/raw_20260214_131637.json → 20 rows
+[2026-02-17T17:42:51.501+0000] {ingest_telemetry.py:86} INFO - Loaded telemetry/raw_20260214_131642.json → 20 rows
+[2026-02-17T17:42:54.462+0000] {ingest_telemetry.py:86} INFO - Loaded telemetry/raw_20260214_131647.json → 20 rows
+[2026-02-17T17:42:57.183+0000] {ingest_telemetry.py:86} INFO - Loaded telemetry/raw_20260214_131652.json → 20 rows
+[2026-02-17T17:42:59.147+0000] {ingest_telemetry.py:86} INFO - Loaded telemetry/raw_20260214_131657.json → 20 rows
+[2026-02-17T17:43:02.821+0000] {ingest_telemetry.py:86} INFO - Loaded telemetry/raw_20260214_131702.json → 20 rows
+[2026-02-17T17:43:05.571+0000] {ingest_telemetry.py:86} INFO - Loaded telemetry/raw_20260214_131708.json → 20 rows
+[2026-02-17T17:43:12.566+0000] {ingest_telemetry.py:86} INFO - Loaded telemetry/raw_20260214_131713.json → 20 rows
+[2026-02-17T17:43:14.913+0000] {ingest_telemetry.py:86} INFO - Loaded telemetry/raw_20260214_131718.json → 20 rows
+[2026-02-17T17:43:17.142+0000] {ingest_telemetry.py:86} INFO - Loaded telemetry/raw_20260214_131723.json → 20 rows
+[2026-02-17T17:43:19.251+0000] {ingest_telemetry.py:86} INFO - Loaded telemetry/raw_20260214_131728.json → 20 rows
+[2026-02-17T17:43:22.691+0000] {ingest_telemetry.py:86} INFO - Loaded telemetry/raw_20260214_131733.json → 20 rows
+[2026-02-17T17:43:25.047+0000] {ingest_telemetry.py:86} INFO - Loaded telemetry/raw_20260214_131739.json → 20 rows
+[2026-02-17T17:43:29.398+0000] {ingest_telemetry.py:86} INFO - Loaded telemetry/raw_20260214_131744.json → 20 rows
+[2026-02-17T17:43:31.824+0000] {ingest_telemetry.py:86} INFO - Loaded telemetry/raw_20260214_131749.json → 20 rows
+[2026-02-17T17:43:35.639+0000] {ingest_telemetry.py:86} INFO - Loaded telemetry/raw_20260214_131754.json → 20 rows
+[2026-02-17T17:43:38.819+0000] {ingest_telemetry.py:86} INFO - Loaded telemetry/raw_20260214_131759.json → 20 rows
+[2026-02-17T17:43:41.555+0000] {ingest_telemetry.py:86} INFO - Loaded telemetry/raw_20260214_131804.json → 20 rows
+[2026-02-17T17:43:44.599+0000] {ingest_telemetry.py:86} INFO - Loaded telemetry/raw_20260214_131809.json → 20 rows
+[2026-02-17T17:43:46.885+0000] {ingest_telemetry.py:86} INFO - Loaded telemetry/raw_20260214_131815.json → 20 rows
+[2026-02-17T17:43:49.207+0000] {ingest_telemetry.py:86} INFO - Loaded telemetry/raw_20260214_131820.json → 20 rows
+[2026-02-17T17:43:51.571+0000] {ingest_telemetry.py:86} INFO - Loaded telemetry/raw_20260214_131825.json → 20 rows
+[2026-02-17T17:43:53.896+0000] {ingest_telemetry.py:86} INFO - Loaded telemetry/raw_20260214_131830.json → 20 rows
+[2026-02-17T17:43:55.703+0000] {ingest_telemetry.py:86} INFO - Loaded telemetry/raw_20260214_131835.json → 20 rows
+[2026-02-17T17:43:57.756+0000] {ingest_telemetry.py:86} INFO - Loaded telemetry/raw_20260214_131840.json → 20 rows
+[2026-02-17T17:43:59.910+0000] {ingest_telemetry.py:86} INFO - Loaded telemetry/raw_20260214_131846.json → 20 rows
+[2026-02-17T17:44:02.690+0000] {ingest_telemetry.py:86} INFO - Loaded telemetry/raw_20260214_131851.json → 20 rows
+[2026-02-17T17:44:04.611+0000] {ingest_telemetry.py:86} INFO - Loaded telemetry/raw_20260214_131856.json → 20 rows
+[2026-02-17T17:44:07.216+0000] {ingest_telemetry.py:86} INFO - Loaded telemetry/raw_20260214_131901.json → 20 rows
+[2026-02-17T17:44:12.059+0000] {ingest_telemetry.py:86} INFO - Loaded telemetry/raw_20260214_131906.json → 20 rows
+[2026-02-17T17:44:15.018+0000] {ingest_telemetry.py:86} INFO - Loaded telemetry/raw_20260214_131911.json → 20 rows
+[2026-02-17T17:44:18.113+0000] {ingest_telemetry.py:86} INFO - Loaded telemetry/raw_20260214_131917.json → 20 rows
+[2026-02-17T17:44:20.606+0000] {ingest_telemetry.py:86} INFO - Loaded telemetry/raw_20260214_131922.json → 20 rows
+[2026-02-17T17:44:22.983+0000] {ingest_telemetry.py:86} INFO - Loaded telemetry/raw_20260214_131927.json → 20 rows
+[2026-02-17T17:44:25.518+0000] {ingest_telemetry.py:86} INFO - Loaded telemetry/raw_20260214_131932.json → 20 rows
+[2026-02-17T17:44:29.917+0000] {ingest_telemetry.py:86} INFO - Loaded telemetry/raw_20260214_131937.json → 20 rows
+[2026-02-17T17:44:32.382+0000] {ingest_telemetry.py:86} INFO - Loaded telemetry/raw_20260214_131942.json → 20 rows
+[2026-02-17T17:44:34.887+0000] {ingest_telemetry.py:86} INFO - Loaded telemetry/raw_20260214_131948.json → 20 rows
+[2026-02-17T17:44:37.087+0000] {ingest_telemetry.py:86} INFO - Loaded telemetry/raw_20260214_131953.json → 20 rows
+[2026-02-17T17:44:39.761+0000] {ingest_telemetry.py:86} INFO - Loaded telemetry/raw_20260214_131958.json → 20 rows
+[2026-02-17T17:44:41.601+0000] {ingest_telemetry.py:86} INFO - Loaded telemetry/raw_20260214_132003.json → 20 rows
+[2026-02-17T17:44:45.180+0000] {ingest_telemetry.py:86} INFO - Loaded telemetry/raw_20260214_132008.json → 20 rows
+[2026-02-17T17:44:48.134+0000] {ingest_telemetry.py:86} INFO - Loaded telemetry/raw_20260214_132013.json → 20 rows
+[2026-02-17T17:45:16.616+0000] {ingest_telemetry.py:86} INFO - Loaded telemetry/raw_20260214_132018.json → 20 rows
+[2026-02-17T17:45:19.183+0000] {ingest_telemetry.py:86} INFO - Loaded telemetry/raw_20260214_132024.json → 20 rows
+[2026-02-17T17:45:21.697+0000] {ingest_telemetry.py:86} INFO - Loaded telemetry/raw_20260214_132029.json → 20 rows
+[2026-02-17T17:45:22.365+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 199, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 216, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/ingest_telemetry.py", line 84, in load_files_to_bigquery
+    job.result()  # Wait for job to complete
+  File "/home/airflow/.local/lib/python3.8/site-packages/google/cloud/bigquery/job/base.py", line 971, in result
+    return super(_AsyncJob, self).result(timeout=timeout, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/google/api_core/future/polling.py", line 261, in result
+    raise self._exception
+google.api_core.exceptions.Forbidden: 403 Exceeded rate limits: too many table update operations for this table. For more information, see https://cloud.google.com/bigquery/docs/troubleshoot-quotas; reason: rateLimitExceeded, location: table.write, message: Exceeded rate limits: too many table update operations for this table. For more information, see https://cloud.google.com/bigquery/docs/troubleshoot-quotas
+[2026-02-17T17:45:22.403+0000] {taskinstance.py:1138} INFO - Marking task as FAILED. dag_id=ingest_telemetry, task_id=load_to_bigquery, execution_date=20260217T173500, start_date=20260217T174210, end_date=20260217T174522
+[2026-02-17T17:45:22.419+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 25 for task load_to_bigquery (403 Exceeded rate limits: too many table update operations for this table. For more information, see https://cloud.google.com/bigquery/docs/troubleshoot-quotas; reason: rateLimitExceeded, location: table.write, message: Exceeded rate limits: too many table update operations for this table. For more information, see https://cloud.google.com/bigquery/docs/troubleshoot-quotas; 670)
+[2026-02-17T17:45:22.441+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2026-02-17T17:45:22.458+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

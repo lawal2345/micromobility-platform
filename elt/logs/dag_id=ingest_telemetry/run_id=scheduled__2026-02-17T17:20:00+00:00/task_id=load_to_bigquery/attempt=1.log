@@ -1,0 +1,31 @@
+[2026-02-17T17:25:02.716+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ingest_telemetry.load_to_bigquery scheduled__2026-02-17T17:20:00+00:00 [queued]>
+[2026-02-17T17:25:02.720+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ingest_telemetry.load_to_bigquery scheduled__2026-02-17T17:20:00+00:00 [queued]>
+[2026-02-17T17:25:02.720+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2026-02-17T17:25:02.726+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): load_to_bigquery> on 2026-02-17 17:20:00+00:00
+[2026-02-17T17:25:02.729+0000] {standard_task_runner.py:60} INFO - Started process 436 to run task
+[2026-02-17T17:25:02.734+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'ingest_telemetry', 'load_to_bigquery', 'scheduled__2026-02-17T17:20:00+00:00', '--job-id', '15', '--raw', '--subdir', 'DAGS_FOLDER/ingest_telemetry.py', '--cfg-path', '/tmp/tmphvscrhqm']
+[2026-02-17T17:25:02.736+0000] {standard_task_runner.py:88} INFO - Job 15: Subtask load_to_bigquery
+[2026-02-17T17:25:02.764+0000] {task_command.py:423} INFO - Running <TaskInstance: ingest_telemetry.load_to_bigquery scheduled__2026-02-17T17:20:00+00:00 [running]> on host 173280efb2df
+[2026-02-17T17:25:02.800+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='lawal' AIRFLOW_CTX_DAG_ID='ingest_telemetry' AIRFLOW_CTX_TASK_ID='load_to_bigquery' AIRFLOW_CTX_EXECUTION_DATE='2026-02-17T17:20:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-02-17T17:20:00+00:00'
+[2026-02-17T17:25:05.744+0000] {ingest_telemetry.py:86} INFO - Loaded telemetry/raw_20260214_131534.json → 4 rows
+[2026-02-17T17:25:07.780+0000] {ingest_telemetry.py:86} INFO - Loaded telemetry/raw_20260214_131540.json → 8 rows
+[2026-02-17T17:25:10.701+0000] {ingest_telemetry.py:86} INFO - Loaded telemetry/raw_20260214_131545.json → 9 rows
+[2026-02-17T17:25:11.324+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 199, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 216, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/ingest_telemetry.py", line 84, in load_files_to_bigquery
+    job.result()  # Wait for job to complete
+  File "/home/airflow/.local/lib/python3.8/site-packages/google/cloud/bigquery/job/base.py", line 971, in result
+    return super(_AsyncJob, self).result(timeout=timeout, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/google/api_core/future/polling.py", line 261, in result
+    raise self._exception
+google.api_core.exceptions.Forbidden: 403 Exceeded rate limits: too many table update operations for this table. For more information, see https://cloud.google.com/bigquery/docs/troubleshoot-quotas; reason: rateLimitExceeded, location: table.write, message: Exceeded rate limits: too many table update operations for this table. For more information, see https://cloud.google.com/bigquery/docs/troubleshoot-quotas
+[2026-02-17T17:25:11.338+0000] {taskinstance.py:1138} INFO - Marking task as UP_FOR_RETRY. dag_id=ingest_telemetry, task_id=load_to_bigquery, execution_date=20260217T172000, start_date=20260217T172502, end_date=20260217T172511
+[2026-02-17T17:25:11.351+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 15 for task load_to_bigquery (403 Exceeded rate limits: too many table update operations for this table. For more information, see https://cloud.google.com/bigquery/docs/troubleshoot-quotas; reason: rateLimitExceeded, location: table.write, message: Exceeded rate limits: too many table update operations for this table. For more information, see https://cloud.google.com/bigquery/docs/troubleshoot-quotas; 436)
+[2026-02-17T17:25:11.358+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2026-02-17T17:25:11.375+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: raw
+    database: micromobility-platform
+    schema: raw
+    tables:
+      - name: raw_telemetry
+        description: "Raw IoT telemetry data loaded by Airflow"
