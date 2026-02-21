@@ -1,6 +1,6 @@
 # MobiCommand: Micro-Mobility Analytics Platform with Data Engineering
 
-I developed a data engineering and analytics prototype to how IoT telemetry from micro-mobility vehicles can be collected, processed, and served as insights to operators.
+I developed a data engineering and analytics prototype to show how IoT telemetry from micro-mobility vehicles can be collected, processed, and served as insights to operators.
 
 ---
 
